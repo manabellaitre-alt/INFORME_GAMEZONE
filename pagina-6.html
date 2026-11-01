@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archivos y base de datos - GAMEZONE</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+<a href="index.html" class="logo">INFORME <span>·</span> TRABAJO FINAL</a>
+<small>Sistema de gestión web</small>
+</header>
+<div class="contenedor">
+<nav class="menu">
+<h4>Contenido del informe</h4>
+<a href="index.html">01 · Carátula</a>
+<a href="pagina-2.html">02 · Presentación</a>
+<a href="pagina-3.html">03 · Público y diseño</a>
+<a href="pagina-4.html">04 · Funcionalidades</a>
+<a href="pagina-5.html">05 · Herramientas</a>
+<a class="activo" href="pagina-6.html">06 · Archivos y BD</a>
+<a href="pagina-7.html">07 · CRUD</a>
+<a href="pagina-8.html">08 · Seguridad</a>
+<a href="pagina-9.html">09 · Pruebas</a>
+<a href="pagina-10.html">10 · Conclusión</a>
+</nav>
+
+<main class="documento">
+<p class="etiqueta">05 · Estructura del sistema</p>
+<h1>Archivos y base de datos</h1>
+
+<h2>Creación y organización de los archivos</h2>
+<p>Desde Visual Studio Code se crearán las carpetas y los documentos que compondrán el proyecto. Se utilizará una estructura organizada para separar los archivos según sus responsabilidades.</p>
+
+<p><strong>Estructura prevista:</strong></p>
+
+<div class="codigo">GAMEZONE/
+│
+├── index.php
+├── registro.php
+├── login.php
+├── inicio.php
+├── juegos.php
+├── perfil.php
+├── cerrar_sesion.php
+│
+├── conexion.php
+├── verificar_sesion.php
+├── verificar_admin.php
+│
+├── admin_usuarios.php
+├── registrar_usuario.php
+├── editar_usuario.php
+├── archivar_usuario.php
+├── usuarios_archivados.php
+├── reactivar_usuario.php
+│
+├── includes/
+│   ├── header.php
+│   └── footer.php
+│
+├── css/
+│   └── estilos.css
+│
+├── img/
+│   ├── logo.png
+│   ├── portada.jpg
+│   ├── juego1.jpg
+│   ├── juego2.jpg
+│   └── juego3.jpg
+│
+└── database/
+    └── gamezone_db.sql</div>
+
+<p>Los nombres y las responsabilidades podrán ajustarse durante la programación, pero se mantendrá esta organización general.</p>
+
+<h2>Creación de los archivos HTML y PHP</h2>
+<p>Se utilizarán documentos con extensión .php para construir la mayoría de las páginas. Estos archivos permitirán combinar la estructura HTML con las instrucciones PHP necesarias para procesar información.</p>
+
+<p>Por ejemplo, registro.php contendrá los elementos HTML del formulario y el código PHP que recibirá, validará y guardará los datos ingresados.</p>
+
+<p>Las páginas se construirán mediante elementos como encabezados, títulos, párrafos, formularios, imágenes, botones, enlaces y secciones.</p>
+
+<h2>Creación del archivo CSS</h2>
+<p>Dentro de la carpeta css se creará estilos.css, que contendrá las reglas visuales del sitio. Se definirán los colores, tipografías, fondos, márgenes, tamaños, botones, formularios, tarjetas de videojuegos, tablas y distribución de los elementos.</p>
+
+<p>El archivo se vinculará con las páginas PHP mediante una referencia dentro de la sección head del documento HTML.</p>
+
+<p>De esta manera, se podrá mantener una identidad visual compartida y realizar modificaciones generales sin repetir los estilos en cada página.</p>
+
+<h2>Incorporación de imágenes</h2>
+<p>Se creará la carpeta img, donde se almacenarán el logo, las imágenes de portada, las portadas de videojuegos y los recursos decorativos.</p>
+
+<p>Los archivos se organizarán con nombres identificables para facilitar su incorporación en las distintas secciones.</p>
+
+<h2>Archivos compartidos</h2>
+<p>También se podrán crear documentos complementarios, como header.php y footer.php para reutilizar el encabezado, la navegación y el pie de página. Esto permitirá mantener una estructura uniforme y evitar repetir el mismo código en todas las páginas.</p>
+
+<h2>Creación de la base de datos</h2>
+<p>Una vez preparada la estructura del proyecto, se procederá a configurar la base de datos.</p>
+
+<p>Se ingresará a phpMyAdmin desde el navegador mediante:</p>
+
+<div class="codigo">http://localhost/phpmyadmin/</div>
+
+<p>Allí se creará una base de datos denominada gamezone_db y, dentro de ella, una tabla principal llamada usuarios.</p>
+
+<table>
+<thead>
+<tr><th>Campo</th><th>Función</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>Identificador único del usuario.</td></tr>
+<tr><td>nombre</td><td>Nombre.</td></tr>
+<tr><td>apellido</td><td>Apellido.</td></tr>
+<tr><td>dni</td><td>Documento de identidad.</td></tr>
+<tr><td>email</td><td>Correo electrónico.</td></tr>
+<tr><td>password</td><td>Contraseña almacenada mediante hash.</td></tr>
+<tr><td>rol</td><td>Identifica si es usuario o administrador.</td></tr>
+<tr><td>estado</td><td>Indica si está activo o archivado.</td></tr>
+<tr><td>fecha_creacion</td><td>Fecha de registro.</td></tr>
+<tr><td>fecha_archivado</td><td>Fecha de archivado, si corresponde.</td></tr>
+</tbody>
+</table>
+
+<p>Se establecerán restricciones para evitar que existan dos cuentas con el mismo DNI o correo electrónico.</p>
+
+<p>También se configurará el identificador id como clave primaria, permitiendo localizar cada registro de manera individual.</p>
+
+<div class="pie">
+<span>Trabajo práctico final · 4°A</span>
+<span>Página 06 / 10</span>
+</div>
+</main>
+</div>
+<div class="contenedor">
+<div class="navegacion" style="grid-column:2">
+<a href="pagina-5.html">← Anterior</a>
+<a href="pagina-7.html">Siguiente →</a>
+</div>
+</div>
+</body>
+</html>

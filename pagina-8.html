@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paneles y seguridad - GAMEZONE</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+<a href="index.html" class="logo">INFORME <span>·</span> TRABAJO FINAL</a>
+<small>Sistema de gestión web</small>
+</header>
+<div class="contenedor">
+<nav class="menu">
+<h4>Contenido del informe</h4>
+<a href="index.html">01 · Carátula</a>
+<a href="pagina-2.html">02 · Presentación</a>
+<a href="pagina-3.html">03 · Público y diseño</a>
+<a href="pagina-4.html">04 · Funcionalidades</a>
+<a href="pagina-5.html">05 · Herramientas</a>
+<a href="pagina-6.html">06 · Archivos y BD</a>
+<a href="pagina-7.html">07 · CRUD</a>
+<a class="activo" href="pagina-8.html">08 · Seguridad</a>
+<a href="pagina-9.html">09 · Pruebas</a>
+<a href="pagina-10.html">10 · Conclusión</a>
+</nav>
+
+<main class="documento">
+<p class="etiqueta">07 · Integración</p>
+<h1>Paneles privados y seguridad</h1>
+
+<h2>Desarrollo de los paneles privados</h2>
+<p>Una vez implementadas las funciones principales, se completarán las páginas privadas de GAMEZONE.</p>
+
+<div class="tarjetas">
+<div class="tarjeta">
+<strong>Panel de usuario</strong>
+<p>Se desarrollará en inicio.php. Mostrará un mensaje de bienvenida, accesos a las diferentes secciones, videojuegos destacados y novedades.</p>
+</div>
+<div class="tarjeta">
+<strong>Perfil</strong>
+<p>Se desarrollará en perfil.php y mostrará los datos personales de la cuenta.</p>
+</div>
+<div class="tarjeta">
+<strong>Panel administrativo</strong>
+<p>Se desarrollará en admin_usuarios.php y permitirá gestionar los registros mediante el CRUD.</p>
+</div>
+</div>
+
+<p>Para proteger estas páginas se utilizarán archivos de verificación de sesión y permisos.</p>
+
+<p>El primer administrador se creará mediante un procedimiento controlado, con una contraseña procesada utilizando password_hash(). El formulario público de registro no permitirá que una persona se otorgue permisos administrativos.</p>
+
+<h2>Integración de los componentes</h2>
+<p>Cuando todos los archivos estén desarrollados, se conectarán entre sí para formar un único sistema. La integración permitirá que cada tecnología cumpla su función:</p>
+
+<ul>
+<li>HTML organizará los contenidos.</li>
+<li>CSS establecerá el diseño visual.</li>
+<li>PHP procesará la información y ejecutará las funcionalidades.</li>
+<li>PDO permitirá realizar consultas seguras.</li>
+<li>MySQL almacenará los datos.</li>
+<li>Las sesiones controlarán el acceso a las páginas privadas.</li>
+</ul>
+
+<p>Se comprobará que los formularios envíen correctamente la información, que las consultas se realicen sobre la base de datos y que la navegación entre las diferentes páginas funcione como se espera.</p>
+
+<h2>Seguridad del sistema</h2>
+<p>Durante la programación se incorporarán medidas de seguridad para proteger las cuentas y la información almacenada.</p>
+
+<ul>
+<li><strong>password_hash() y password_verify():</strong> para proteger las contraseñas.</li>
+<li><strong>Consultas preparadas mediante PDO:</strong> para reducir riesgos de inyección SQL.</li>
+<li><strong>Validación de los datos:</strong> recibidos en los formularios.</li>
+<li><strong>Control de sesiones:</strong> para proteger las páginas privadas.</li>
+<li><strong>Verificación de roles:</strong> para restringir las funciones administrativas.</li>
+<li><strong>htmlspecialchars():</strong> para evitar que los datos ingresados se interpreten como código HTML.</li>
+<li><strong>Protección CSRF:</strong> en operaciones que modifiquen información.</li>
+<li><strong>Restricción de acceso:</strong> a las operaciones de edición, archivado y reactivación.</li>
+</ul>
+
+<p>Estas medidas se aplicarán a medida que se desarrolle cada funcionalidad.</p>
+
+<div class="pie">
+<span>Trabajo práctico final · 4°A</span>
+<span>Página 08 / 10</span>
+</div>
+</main>
+</div>
+<div class="contenedor">
+<div class="navegacion" style="grid-column:2">
+<a href="pagina-7.html">← Anterior</a>
+<a href="pagina-9.html">Siguiente →</a>
+</div>
+</div>
+</body>
+</html>

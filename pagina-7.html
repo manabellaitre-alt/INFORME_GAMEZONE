@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autenticación y CRUD - GAMEZONE</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+<a href="index.html" class="logo">INFORME <span>·</span> TRABAJO FINAL</a>
+<small>Sistema de gestión web</small>
+</header>
+<div class="contenedor">
+<nav class="menu">
+<h4>Contenido del informe</h4>
+<a href="index.html">01 · Carátula</a>
+<a href="pagina-2.html">02 · Presentación</a>
+<a href="pagina-3.html">03 · Público y diseño</a>
+<a href="pagina-4.html">04 · Funcionalidades</a>
+<a href="pagina-5.html">05 · Herramientas</a>
+<a href="pagina-6.html">06 · Archivos y BD</a>
+<a class="activo" href="pagina-7.html">07 · CRUD</a>
+<a href="pagina-8.html">08 · Seguridad</a>
+<a href="pagina-9.html">09 · Pruebas</a>
+<a href="pagina-10.html">10 · Conclusión</a>
+</nav>
+
+<main class="documento">
+<p class="etiqueta">06 · Programación</p>
+<h1>Conexión, acceso y administración</h1>
+
+<h2>Conexión entre PHP y MySQL</h2>
+<p>Después de crear la base de datos, se desarrollará el archivo conexion.php. Su función será establecer la comunicación entre PHP y MySQL utilizando PDO.</p>
+
+<p>Esta conexión será utilizada por las diferentes páginas para guardar, consultar y modificar información.</p>
+
+<p>Por ejemplo, cuando una persona se registre, PHP utilizará la conexión para insertar sus datos en la tabla usuarios. Cuando intente iniciar sesión, permitirá consultar si su cuenta existe y verificar sus credenciales.</p>
+
+<p>La conexión se reutilizará mediante instrucciones como require o include, evitando escribirla nuevamente en cada archivo.</p>
+
+<h2>Programación del registro y el inicio de sesión</h2>
+
+<h3>Registro</h3>
+<p>Se programará el formulario en registro.php, con los campos de nombre, apellido, DNI, correo electrónico y contraseña.</p>
+
+<p>PHP comprobará que los campos estén completos, que los datos sean válidos y que no existan cuentas con el mismo DNI o correo.</p>
+
+<p>Si la información es correcta, se almacenará en MySQL. La contraseña se procesará mediante password_hash() para evitar guardarla como texto sin protección.</p>
+
+<h3>Inicio de sesión</h3>
+<p>En login.php se desarrollará el formulario de acceso.</p>
+
+<p>El sistema consultará la cuenta correspondiente y verificará la contraseña mediante password_verify().</p>
+
+<p>Si los datos son correctos, PHP iniciará una sesión mediante session_start(), permitiendo reconocer al usuario durante su navegación.</p>
+
+<p>Si los datos son incorrectos, se mostrará un mensaje de error.</p>
+
+<h3>Cierre de sesión</h3>
+<p>Se creará cerrar_sesion.php, encargado de finalizar la sesión y devolver al usuario a la pantalla de acceso.</p>
+
+<h2>Desarrollo del CRUD y administración de usuarios</h2>
+<p>Una vez que el registro y el inicio de sesión estén funcionando, se desarrollará el CRUD, una de las partes centrales del trabajo práctico.</p>
+
+<p>CRUD representa cuatro operaciones fundamentales para administrar información:</p>
+
+<div class="tarjetas">
+<div class="tarjeta">
+<strong>CREATE</strong>
+<p>Crear registros.</p>
+</div>
+<div class="tarjeta">
+<strong>READ</strong>
+<p>Consultar registros.</p>
+</div>
+<div class="tarjeta">
+<strong>UPDATE</strong>
+<p>Actualizar registros.</p>
+</div>
+<div class="tarjeta">
+<strong>DELETE</strong>
+<p>Eliminar registros.</p>
+</div>
+</div>
+
+<p>En GAMEZONE se utilizará una eliminación lógica: en lugar de borrar definitivamente una cuenta, se archivará para conservar sus datos y permitir su reactivación.</p>
+
+<table>
+<thead>
+<tr><th>Operación</th><th>Desarrollo previsto</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>CREATE – Crear usuarios</td>
+<td>Se desarrollará un formulario administrativo para incorporar nuevas cuentas. Al enviar los datos, PHP los validará y los guardará en MySQL.</td>
+</tr>
+<tr>
+<td>READ – Consultar usuarios</td>
+<td>En admin_usuarios.php se mostrará una tabla con los usuarios registrados. Se incorporará un buscador que permita localizar cuentas mediante nombre, apellido, DNI o correo electrónico.</td>
+</tr>
+<tr>
+<td>UPDATE – Modificar usuarios</td>
+<td>Mediante editar_usuario.php, el administrador podrá seleccionar una cuenta, visualizar sus datos actuales y modificar la información permitida.</td>
+</tr>
+<tr>
+<td>DELETE – Archivar usuarios</td>
+<td>Mediante archivar_usuario.php, se cambiará el estado de una cuenta a archivado, conservando su información en la base de datos.</td>
+</tr>
+<tr>
+<td>Reactivación</td>
+<td>Se creará usuarios_archivados.php para consultar las cuentas archivadas y reactivar_usuario.php para permitir que vuelvan a estar activas.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Todas estas acciones estarán protegidas para que solamente un administrador autorizado pueda ejecutarlas.</p>
+
+<div class="pie">
+<span>Trabajo práctico final · 4°A</span>
+<span>Página 07 / 10</span>
+</div>
+</main>
+</div>
+<div class="contenedor">
+<div class="navegacion" style="grid-column:2">
+<a href="pagina-6.html">← Anterior</a>
+<a href="pagina-8.html">Siguiente →</a>
+</div>
+</div>
+</body>
+</html>
